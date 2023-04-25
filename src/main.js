@@ -61,3 +61,33 @@ prevBtns.forEach((btn) => {
 // Показываем первый шаг
 showStep();
 
+const button = document.querySelector('#get-recommendations');
+
+  button.addEventListener('click', () => {
+    // отправляем ajax-запрос на сервер для получения подборки
+    fetch('/get-recommendations')
+      .then((response) => {
+        if (response.ok) {
+          // если запрос успешный, то получаем данные и выводим их на страницу
+          return response.json();
+        } else {
+          // если произошла ошибка, то показываем сообщение с ошибкой
+          throw new Error(`Произошла ошибка: ${response.statusText}`);
+        }
+      })
+      .then((data) => {
+        // обрабатываем полученные данные и выводим их на страницу
+        const recommendationsContainer = document.querySelector('#recommendations');
+        recommendationsContainer.innerHTML = '';
+
+        data.forEach((item) => {
+          const recommendation = document.createElement('div');
+          recommendation.textContent = item.title;
+          recommendationsContainer.appendChild(recommendation);
+        });
+      })
+      .catch((error) => {
+        // если произошла ошибка при выполнении запроса, то показываем сообщение с ошибкой
+        alert(error.message);
+      });
+  });
