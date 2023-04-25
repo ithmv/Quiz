@@ -6,6 +6,7 @@
     font-family: 'Onest', sans-serif;
     width: 1216px;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 section {
@@ -41,14 +42,17 @@ h1 > p {
     background: white;
     padding: 32px;
     border-radius: 24px;
-    margin: 32px;
+    margin: 32px 32px 32px 150px;
     min-width: 576px;
     min-height: 392px;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .top {
     display: flex; 
     justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 .top > h2 {
@@ -66,17 +70,118 @@ h1 > p {
     line-height: 20px;
 }
 
-.box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.field {
+margin-bottom: 50px;
 }
 
-label {
+#step1 > .field, #step3 > .field, #step8 > .field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 56px ;
+}
+
+#step1 > .buttons >.prev-btn {
+    opacity: 0;
+    cursor: auto;
+}
+
+.step button {
+    float: right;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: white;
+    background: #383838;
+    font-size: 16px;
+}
+
+.buttons {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
+}
+
+.next-btn {
+    width: 104px;
+}
+
+.radio {
+    background: #F5F5F5;
     padding: 18px 16px;
     border-radius: 16px;
-    background: #F5F5F5;
     margin: 4px;
+}
+
+input {
+    margin: 0;
+    display: block;
+    width: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding: 18px 16px;
+    margin: 4px;
+    border-radius: 16px;
+    color: #383838;
+ }
+
+ .item.active {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.field_select {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    padding: 26px 0 10px 16px;
+    border-radius: 16px;
+    border: 1px solid black;
+    color: #383838;
+    font-size: 16px;
+    margin-bottom: 200px;
+}
+
+.lselect {
+    transform: translate(20px, 23px);
+    color: #9B9B9B;
+    font-size: 12px;
+}
+
+select > option {
+    color: #383838;
+    font-size: 16px;
+}
+
+#step9 > .field input {
+    width: 512px;
+    margin: 4px;
+    background: #F5F5F5;
+    border-radius: 16px;
+    border: none;
+    padding: 18px 16px;
+}
+
+#step9 button {
+    width: 100%;
+}
+
+#step9 > .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#step9 > .buttons p {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #9B9B9B;
+}
+
+#step9 > .buttons span {
+text-decoration: underline;
 }

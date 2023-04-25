@@ -15,24 +15,256 @@
             <h1>Подберем вуз мечты
                 <p>Ответьте на 8 простых вопросов, и мы составим список наболее подходящих для вас вузов</p>
             </h1>
-
             <img src="images/Group 1593.png " alt="">
         </section>
 
-        <div class="step" id="1">
+        <div class="step" id="step1">
             <div class="top">
-                <h2>Для кого вы ищете учебное заведение?</h2>
-                <span>Шаг 1/9</span>
+              <h2>Для кого вы ищете учебное заведение?</h2>
+              <span>Шаг 1/9</span>
             </div>
-            <div class="box">
-                <label><input type="radio" name="stepOne" id="" checked>Себе</label>
-                <label><input type="radio" name="stepOne" id="">Супругу/супруге</label>
-                <label><input type="radio" name="stepOne" id="">Родственнику</label>
-                <label><input type="radio" name="stepOne" id="">Коллеге</label>
-                <label><input type="radio" name="stepOne" id="">Ребенку</label>
-                <label><input type="radio" name="stepOne" id="">Другое</label>
+            <div class="field">
+                <div class="item">                
+                    <label for="self">Себе</label>
+                    <input type="radio" name="for_Whom" id="self">
+                </div>
+                <div class="item">
+                    <label for="spouse">Супругу/супруге</label>
+                    <input type="radio" name="for_Whom" id="spouse">
+                </div>
+                <div class="item">
+                    <label for="relative">Родственнику</label>
+                    <input type="radio" name="for_Whom" id="relative">
+                </div>
+                <div class="item">
+                    <label for="colleague">Коллеге</label>
+                    <input type="radio" name="for_Whom" id="colleague">
+                </div>
+                <div class="item">
+                    <label for="kid">Ребенку</label>
+                    <input type="radio" name="for_Whom" id="kid">
+                </div>
+                <div class="item">                
+                    <label for="other">Другое</label>
+                    <input type="radio" name="for_Whom" id="other">    
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn" disabled>< Назад</button>
+                <button class="next-btn">Далее ></button>
             </div>
         </div>
+
+        <div class="step" id="step2">
+            <div class="top">
+              <h2>В каком городе планируете поступать?</h2>
+              <span>Шаг 2/9</span>
+            </div>
+            <div class="field_select">
+                <label class="lselect" for="name">Город</label>
+                <select name="city" id="city" >
+                    <option value="SpB">Санкт-Петербург</option>
+                    <option value="Moscow">Москва</option>
+                    <option value="Tomsk">Томск</option>
+                    <option value="Nsk">Новосибирск</option>
+                    <option value="Kemerovo">Кемерово</option>
+                    <option value="Barnaul">Барнаул</option>
+                    <option value="Ekb">Екатеринбург</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step3">
+            <div class="top">
+              <h2>Для кого вы ищете учебное заведение?</h2>
+              <span>Шаг 3/9</span>
+            </div>
+            <div class="field">
+                <div class="item">                
+                    <label for="9klass">9 классов</label>
+                    <input type="radio" name="Education" id="9klass">
+                </div>
+                <div class="item">
+                    <label for="college">Колледж/техникум</label>
+                    <input type="radio" name="Education" id="college">
+                </div>
+                <div class="item">
+                    <label for="11klass">11 классов</label>
+                    <input type="radio" name="Education" id="11klass">
+                </div>
+                <div class="item">
+                    <label for="secschool">Училище</label>
+                    <input type="radio" name="Education" id="secschool">
+                </div>
+                <div class="item">
+                    <label for="incopmHE">Неоконченное высшее</label>
+                    <input type="radio" name="Education" id="incopmHE">
+                </div>
+                <div class="item">                
+                    <label for="otherEd">Другое</label>
+                    <input type="radio" name="Education" id="otherEd">    
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step4">
+            <div class="top">
+              <h2>Куда планируете поступать?</h2>
+              <span>Шаг 4/9</span>
+            </div>
+            <div class="field">
+                <div class="item">                
+                    <label for="university">Вуз</label>
+                    <input type="radio" name="Place" id="university">
+                </div>
+                <div class="item">
+                    <label for="technicalCollege">Колледж/техникум</label>
+                    <input type="radio" name="Place" id="technicalCollege">
+                </div>
+                <div class="item">
+                    <label for="specializedSchool">Училище</label>
+                    <input type="radio" name="Place" id="specializedSchool">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step5">
+            <div class="top">
+              <h2>Какую форму обучения предпочитаете?</h2>
+              <span>Шаг 5/9</span>
+            </div>
+            <div class="field">
+                <div class="item">                
+                    <label for="fullTime">Очную</label>
+                    <input type="radio" name="form" id="fullTime">
+                </div>
+                <div class="item">
+                    <label for="partTime">Заочную</label>
+                    <input type="radio" name="form" id="partTime">
+                </div>
+                <div class="item">
+                    <label for="remote">Дистанционную</label>
+                    <input type="radio" name="form" id="remote">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step6">
+            <div class="top">
+              <h2>Рассматриваете платное обучение?</h2>
+              <span>Шаг 6/9</span>
+            </div>
+            <div class="field">
+                <div class="item">                
+                    <label for="no">Нет, только бюджет</label>
+                    <input type="radio" name="payment" id="no">
+                </div>
+                <div class="item">
+                    <label for="yes">Да, планирую учиться платно</label>
+                    <input type="radio" name="payment" id="yes">
+                </div>
+                <div class="item">
+                    <label for="both">Возможны оба варианта</label>
+                    <input type="radio" name="payment" id="both">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step7">
+            <div class="top">
+              <h2>Какая специальность интересует?</h2>
+              <span>Шаг 7/9</span>
+            </div>
+            <div class="field_select">
+                <label class="lselect" for="name">Специальность</label>
+                <select name="spec" id="spec" >
+                    <option value="Economy">Экономика</option>
+                    <option value="Sociology">Социология</option>
+                    <option value="Philosophy">Философия</option>
+                    <option value="Jurisprudence">Юриспруденция</option>
+                    <option value="Programming">Программирование</option>
+                    <option value="Design">Дизайн</option>
+                    <option value="Advertising">Реклама</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step8">
+            <div class="top">
+              <h2>Как скоро планируете поступать?</h2>
+              <span>Шаг 8/9</span>
+            </div>
+            <div class="field">
+                <div class="item">                
+                    <label for="faster">Как можно быстрее</label>
+                    <input type="radio" name="When" id="faster">
+                </div>
+                <div class="item">
+                    <label for="Month">Месяц</label>
+                    <input type="radio" name="When" id="Month">
+                </div>
+                <div class="item">
+                    <label for="Quarter">Квартал</label>
+                    <input type="radio" name="When" id="Quarter">
+                </div>
+                <div class="item">
+                    <label for="halfYear">Полгода</label>
+                    <input type="radio" name="When" id="halfYear">
+                </div>
+                <div class="item">
+                    <label for="Year">Год</label>
+                    <input type="radio" name="When" id="Year">
+                </div>
+
+                
+            </div>
+            <div class="buttons">
+                <button class="prev-btn">< Назад</button>
+                <button class="next-btn">Далее ></button>
+            </div>
+        </div>
+
+        <div class="step" id="step9">
+            <div class="top">
+              <h2>Ваша подборка готова! 🥳 Куда нам отправить её?</h2>
+              <span>Шаг 9/9</span>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Как вас зовут?">
+                <input type="text" placeholder="Номер телефона">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="buttons">
+                <button>Получить подборку</button>
+                <p>Нажимая на кнопку, вы даете согласие на обработку своих <span>Персональных данных</span></p>
+            </div>
+        </div>
+
     </div>
 </body>
 <script src="main.js"></script>
